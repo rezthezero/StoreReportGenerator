@@ -283,6 +283,8 @@ def get_uptime_downtime(local_tz_current_timestamp, week_dict,store_tz):
                 if last_hour_start_time < times_element['end_time'] and local_tz_current_timestamp > times_element['start_time']:
                     
                     #The overlap between the timeframes and the store hours is calculated
+                    #This is calculated based on the difference between the least end time between current_time and end_time of the business hours
+                    #and the highest start_time between the start_time of the business hour and the start_time of the timeframe (last hour, day, week)
                     overlap_duration = (min(local_tz_current_timestamp,times_element['end_time'])-max(times_element['start_time'],last_hour_start_time)).total_seconds()/60
                     
                     #Overlap duration is multiplied by the fractions of active/inactive counts to obtain uptime/downtime respectively
