@@ -9,8 +9,8 @@ import threading
 #Initiating a connection to the database. [The user, password and database details will have to be replaced with the suitable values]
 conn = mysql.connector.connect(
     host = 'localhost',
-    user = "root",
-    password = "Pra-vin1",
+    user = "****",
+    password = "****",
     database='loopdb')
 conn.autocommit = True
 
