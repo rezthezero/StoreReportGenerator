@@ -340,8 +340,6 @@ def generate_store_report(store_id,csvfile):
     
     #Writing the uptime and downtime data into the CSV file passed as a parameter.
     csvfile.write(f"{store_id},{last_hour_uptime:.2f},{last_day_uptime:.2f},{last_week_uptime:.2f},{last_hour_downtime:.2f},{last_day_downtime:.2f},{last_week_downtime:.2f}\n")
-    return week_dict,bh_list,polling_list
-
 
 def generate_report(report_id):
     """
